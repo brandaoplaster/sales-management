@@ -27,6 +27,28 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#configuracao adicional
+
+#gem rails admin
+gem 'rails_admin'
+
+#gem devise
+gem 'devise'
+
+#gem cancancan para 
+gem 'cancancan', '~> 1.15.0'
+
+#gem carrierware
+gem 'carrierwave'
+
+#gem rails admin rollincode	
+gem 'rails_admin_rollincode', '~> 1.0'
+
+# Gem prawn para gerar os pdfs
+gem 'prawn-rails'
+# Gem gruff para gerar os gráficos
+gem 'gruff'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
