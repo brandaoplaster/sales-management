@@ -2,7 +2,7 @@ FROM ruby:2.5.1-slim
 
 # Install the dependencies
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
-    build-essential libpq-dev imagemagick curl
+    build-essential libpq-dev imagemagick libmagickwand-dev curl
 
 # Install the GNUPG
 RUN apt-get install -y gnupg
