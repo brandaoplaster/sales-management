@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: 'postgres:9.5'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+
+  website:
+    depends_on:
+      - 'db'
+    build: .
+    command: bash start
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/sales-management'
+      - 'box:/box'
+    stdin_open: true
+    tty: true
+
+  box:
+    image: busybox
+    volumes:
+      - box:/box
+
+volumes:
+  postgres:
+  box:
