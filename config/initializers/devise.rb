@@ -8,8 +8,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '536b4e3e365072208d984b4b61817152d82fcaad1eabf684aff60961b574047ad72e928e0bfadb6e561d9f22c438d1fc6f37117f0b9940454369ed128ecb99fe'
-  
+  # config.secret_key = 'a3b84fac07d807630b4c038258e3b5ea10f4786fea805cdd267bbbf0f0651fa099495470da2cb629edf6090504ebdd5ff719d5b2ab46d344d0fda9aa1f132cf3'
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -114,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'f07d46f18a6867cea76b1e54f5d84ed3a7155fa1915bee0496f486eee22cd46ee7c2afbed0ab6633b93336b8688a52477d0c936704f5592d7f19e01f3a133568'
+  # config.pepper = 'd4acc3de68759bc61e49c923ec0647cc437c5bb279ba12fc9928bbf92f5025be940b802f0ed6b011637eeca69944a345248a268a5b733f32c0d0796954a05e05'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -126,8 +126,11 @@ Devise.setup do |config|
   # A period that the user is allowed to access the website even without
   # confirming their account. For instance, if set to 2.days, the user will be
   # able to access the website for two days without confirming their account,
-  # access will be blocked just in the third day. Default is 0.days, meaning
-  # the user cannot access the website without confirming their account.
+  # access will be blocked just in the third day.
+  # You can also set it to nil, which will allow the user to access the website
+  # without confirming their account.
+  # Default is 0.days, meaning the user cannot access the website without
+  # confirming their account.
   # config.allow_unconfirmed_access_for = 2.days
 
   # A period that the user is allowed to confirm their account before their
@@ -287,4 +290,10 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
+
+  # ==> Configuration for :registerable
+
+  # When set to false, does not sign a user in automatically after their password is
+  # changed. Defaults to true, so a user is signed in automatically after changing a password.
+  # config.sign_in_after_change_password = true
 end
