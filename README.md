@@ -1,24 +1,35 @@
-# README
+# Sale Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A small administrative system that enables sales management and sales 
+representatives to be **Manager** and **Salesperson**.
+* The seller can make sales, register customers and see their commissions,
+* Manager can create products, discounts and other users.
+* Export data to PDF using graphics.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+>You just need have docker-compose installed in your machine.
 
-* System dependencies
+## Getting Started
+>To get the app running, run the following commands:
 
-* Configuration
+  ```docker
+    docker-compose build
+    docker-compose run --rm webiste bundle install
+    docker-compose run --rm website bundle exec rails db:create
+    docker-compose run --rm website bundle exec rails db:migrate
+    docker-compose up
+  ```
 
-* Database creation
+## Built With
 
-* Database initialization
+* [Ruby on Rails](https://rubyonrails.org/) - Dependency Management
+* [Rails Admin](https://github.com/sferik/rails_admin) - Dependency Management
 
-* How to run the test suite
+## Authors
 
-* Services (job queues, cache servers, search engines, etc.)
+* **Lucas Brandão** - [brandaoplaster](https://github.com/brandaoplaster)
 
-* Deployment instructions
+## License
 
-* ...
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
