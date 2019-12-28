@@ -61,6 +61,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Client do
+    navigation_icon 'fa fa-user'
+
     create do
       field :name
       field :company_name
@@ -145,7 +147,7 @@ RailsAdmin.config do |config|
       end
     end
   end
-  
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
