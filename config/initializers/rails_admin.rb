@@ -61,6 +61,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Client do
+    navigation_icon 'fa fa-user'
+
     create do
       field :name
       field :company_name
@@ -107,6 +109,24 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Discount do
+    parent Product
+  end
+
+  config.model Sale do
+    parent User
+    weight -2
+  end
+
+  config.model Comission do
+    parent User
+    weight -1
+  end
+
+  config.model Client do
+    parent User
+  end
+
   config.model ProductQuantity do
     visible false
   end
@@ -127,7 +147,6 @@ RailsAdmin.config do |config|
       end
     end
   end
-
 
   config.actions do
     dashboard                     # mandatory
