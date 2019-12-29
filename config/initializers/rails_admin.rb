@@ -12,7 +12,7 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_user)
 
   ## == Cancan ==
-  config.authorize_with :cancan
+  config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
@@ -73,7 +73,7 @@ RailsAdmin.config do |config|
       field :status
       field :address
 
-      field :user_id, hidden do
+      field :user_id, :hidden do
         default_value do
           binding[:view]._current_user.id
         end
@@ -90,7 +90,7 @@ RailsAdmin.config do |config|
       field :status
       field :address
 
-      field :user_id, hidden do
+      field :user_id, :hidden do
         default_value do
           binding[:view]._current_user.id
         end
@@ -140,7 +140,7 @@ RailsAdmin.config do |config|
       field :product
       field :quantity
 
-      field :user_id, hidden do
+      field :user_id, :hidden do
         default_value do
           binding[:view]._current_user.id
         end
